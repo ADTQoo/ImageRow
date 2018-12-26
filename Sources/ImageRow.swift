@@ -42,9 +42,9 @@ extension ImageRowSourceTypes {
     var localizedString: String {
         switch self {
         case ImageRowSourceTypes.Camera:
-            return NSLocalizedString("Take photo", comment: "") 
+            return NSLocalizedString("拍照", comment: "") 
         case ImageRowSourceTypes.PhotoLibrary:
-            return NSLocalizedString("Photo Library", comment: "") 
+            return NSLocalizedString("从相册选择", comment: "") 
         case ImageRowSourceTypes.SavedPhotosAlbum:
             return NSLocalizedString("Saved Photos", comment: "") 
         default:
@@ -183,7 +183,7 @@ open class _ImageRow<Cell: CellType>: OptionsRow<Cell>, PresenterRowType, ImageR
         displayImagePickerController(imagePickerSourceType)
       }
     } else {
-      let cancelOption = UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: .cancel, handler: nil)
+      let cancelOption = UIAlertAction(title: NSLocalizedString("取消", comment: ""), style: .cancel, handler: nil)
 
       sourceActionSheet.addAction(cancelOption)
 
